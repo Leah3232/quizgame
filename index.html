@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Leah's Quiz</title>
+<link href ="./assets/css/style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "./assets/Js/script.js"></script>
+
+</head>
+
+
+<body>
+    <!-- This is the first line on the page -->
+    <h1>Leah's Wonderful Quiz!</h1>
+    <h1 class="time" style="text-align:center;"></h1>
+    <div id="main"></div>
+    <div class="row">
+        <!-- View highscores button -->
+        <div class="col-6">
+            <button id="view-scores" type="button" class="btn btn-secondary d-inline-block mt-1">View High Scores</button>
+        </div>
+        <!-- Timer -->
+        <div class="col-6">
+            <p class="d-flex justify-content-end time">you have 10 seconds to answer these questions!</p>
+        </div>
+    </div>
+    
+<!-- This is the quiz box -->
+<form id = "quiz" name = "quiz">
+    <!-- These are my three multiple choice questions -->
+
+    <p class = "questions">In Java, what is the block of statement?</p>
+    <input type = "radio" id = "mc" name = "question1" value = "Shows a warning"> Shows a warning<br>
+    <input type = "radio" id = "mc" name = "question1" value = "Ignores the statement"> Ignores the statement<br>
+    
+    <p class = "questions">The "function" and "var" are known as:</p>
+    <input type = "radio" id = "mc" name = "question2" value = "declaration statements"> declaration statements<br>
+    <input type = "radio" id = "mc" name = "question2" value = "prototypes"> prototypes<br>
+    
+    <p class = "questions">Which one of the following is the correct way for calling the JavaScript code?</p>
+    
+    <input type = "radio" id = "mc" name = "question3" value = "Function/Method"> Function/Method<br>
+    <input type = "radio" id = "mc" name = "question3" value = "Triggering Event"> Triggering Event<br>
+    
+    
+    <input id = "button" type = "button" value = "Finished!" onclick = "check();">
+    
+    
+    </form>
+    
+    
+   <!-- this the final score box section -->
+
+    <section id="final">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                
+                <p>Your final score is: <span id="score" class="pl-1">0</span></p>
+                <!-- This is where the user wants to put their initials and submit score -->
+                <p>Enter initials: <span class="ml-1"><input placeholder="initials" id="initials" /></span>
+                    <button id="submit-score" class="btn btn-success mx-1 my-1 d-inline-block">Submit</button>
+                </p>
+            </div>
+        </div>
+    </section>
+    </body>
+    <script src="./assets/Js/script.js"></script>
+</body>
+</html>
